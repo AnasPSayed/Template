@@ -243,3 +243,9 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/Template.DB/App.Release.config
+/Template.DB/App.Debug.config
+/Template.Entities/App.Release.config
+/Template.Entities/App.Debug.config
+/Template.Service/App.Release.config
+/Template.Service/App.Debug.config
