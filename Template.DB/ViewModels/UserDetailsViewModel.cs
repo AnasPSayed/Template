@@ -1,8 +1,6 @@
-﻿namespace Template.DB.Models
+﻿namespace Template.Entities.ViewModels
 {
-    [PetaPoco.TableName("UserDetails")]
-    [PetaPoco.PrimaryKey("UserID")]
-    public class UserDetails
+    public class UserDetailsViewModel
     {
         public long UserID { get; set; }
         public string UserName { get; set; }

@@ -1,16 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using Template.Service.Interfaces;
+using Template.Service.Implementations;
 using Template.Entities.ViewModels;
-using Template.DB.Repositories;
-using Template.DB.Models;
 
 namespace Template.Web.Controllers
 {
     public class TemplateController : Controller
     {
+        private IUserDetailsService UserdetailService;
+        public TemplateController()
+        {
+            UserdetailService = new UserDetailsService();
+        }
         // GET: Template
         public ActionResult Index()
         {
@@ -20,14 +21,7 @@ namespace Template.Web.Controllers
         [HttpPost]
         public void Register(UserDetailsViewModel userDetails)
         {
-            //userDetails.UserID;
-            //userDetails.Password;
-            LoginRepositoryManager loginManager = new LoginRepositoryManager();
-                UserDetails details = new UserDetails();
-            details.UserName = userDetails.UserName;
-            details.Password = userDetails.Password;
-
-            loginManager.RegisterUser(details);
+            UserdetailService.RegisterUser(userDetails);
         }
     }
 }

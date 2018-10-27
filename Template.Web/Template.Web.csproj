@@ -169,9 +169,9 @@
       <Project>{cabf7f74-feb7-4072-a441-43f51d9752d7}</Project>
       <Name>Template.DB</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Template.Entities\Template.Entities.csproj">
-      <Project>{a8710633-3fcd-43c4-acce-b6d2663eea64}</Project>
-      <Name>Template.Entities</Name>
+    <ProjectReference Include="..\Template.Service\Template.Service.csproj">
+      <Project>{77220d4e-b13a-4723-876b-a6e34bd4de7c}</Project>
+      <Name>Template.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
