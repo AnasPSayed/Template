@@ -1,6 +1,7 @@
 ﻿using Template.DB.Interfaces;
 using Template.DB.Models;
 using Template.DB.Repositories;
+using Template.Entities.ViewModels;
 
 namespace Template.DB.Implementations
 {
@@ -12,7 +13,7 @@ namespace Template.DB.Implementations
         {
             loginRepo = new LoginRepository();
         }
-        public int RegisterUser(UserDetails details)
+        public int RegisterUser(UserDetailsViewModel details)
         {
             return loginRepo.RegisterUser(details);
         }

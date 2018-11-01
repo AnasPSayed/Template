@@ -22,12 +22,12 @@ namespace Template.Service.Implementations
         #region Private
         private int SetUserValues(UserDetailsViewModel viewModel)
         {
-            UserDetails uDetails = new UserDetails();
-            uDetails.UserID = viewModel.UserID;
-            uDetails.UserName = viewModel.UserName;
-            uDetails.Password = viewModel.Password;
+            //UserDetails uDetails = new UserDetails();
+            //uDetails.UserID = viewModel.UserID;
+            //uDetails.UserName = viewModel.UserName;
+            //uDetails.XID = viewModel.XID;
 
-            return repoManager.RegisterUser(uDetails);
+            return repoManager.RegisterUser(viewModel);
         }
         #endregion
     }

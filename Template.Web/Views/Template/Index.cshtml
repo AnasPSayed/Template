@@ -14,7 +14,7 @@
         </tr>
         <tr>
             <td>
-                UserName:
+                Name:
             </td>
             <td>
                 @Html.TextBoxFor(m => m.UserName)
@@ -23,15 +23,72 @@
 
         <tr>
             <td>
-                Password:
+                XID:
             </td>
             <td>
-                @Html.TextBoxFor(m => m.Password)
+                @Html.TextBoxFor(m => m.XID)
             </td>
         </tr>
         <tr>
-            <td colspan="2" align="center"><input type="submit" value="Register"/></td>
+            <td>
+                Technical skills:
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                @*create another table here*@
+                <table id="SkillTable">
+                    <tr>
+                        <th>
+                            Skill Name:
+                        </th>
+                        <th>
+                            Skill Type:
+                        </th>
+                        <th>
+                            Years of Experiance:
+                        </th>
+                    </tr>
+                    @for (int i = 0; i < Model.SkillSets.Count; i++)
+                    {
+                        <tr>
+                            <td>
+                                @Html.TextBoxFor(m => m.SkillSets[i].SkillSetName)
+                            </td>
+                            <td>
+                                @Html.TextBoxFor(m => m.SkillSets[i].SkillSetType)
+                            </td>
+                            <td>
+                                @Html.TextBoxFor(m => m.SkillSets[i].SkillSetYOE)
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input id="addBtn" type="button" value="Add row" />
+                <input id="removeBtn" type="button" value="Remove row" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right"><input type="submit" value="Submit" /></td>
         </tr>
     </table>
+    <script>
+        $("#addBtn").on("click", function () {
+
+            var newRow = "<tr><td><input type='text' /></td><td><input type='text' /></td><td><input type='text' /></td></tr>";
+
+            $("#SkillTable").append(newRow);
+
+        });
+        $("#removeBtn").on("click", function () {
+
+            $('#SkillTable tr:last').remove();
+
+        });
+    </script>
 }
 
