@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 namespace Template.DB.Models
 {
     [PetaPoco.TableName("SkillSet")]
-    [PetaPoco.PrimaryKey("SkillSetID")]
+    [PetaPoco.PrimaryKey("Id")]
     public class SkillSet
     {
-        public long SkillSetID { get; set; }
+        public long Id { get; set; }
         public string SkillSetName { get; set; }
         public string SkillSetType { get; set; }
-        public string SkillSetYOE { get; set; }
-        public long UserID { get; set; }
+        public int SkillSetYOE { get; set; }
+        public long UserId { get; set; }
     }
 }

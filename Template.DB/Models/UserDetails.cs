@@ -1,11 +1,11 @@
 ﻿namespace Template.DB.Models
 {
-    [PetaPoco.TableName("UserDetails")]
-    [PetaPoco.PrimaryKey("UserID")]
-    public class UserDetails
+    [PetaPoco.TableName("UserData")]
+    [PetaPoco.PrimaryKey("Id")]
+    public class UserData
     {
-        public long UserID { get; set; }
+        public long Id { get; set; }
         public string UserName { get; set; }
-        public string XID { get; set; }
+        public string XId { get; set; }
     }
 }

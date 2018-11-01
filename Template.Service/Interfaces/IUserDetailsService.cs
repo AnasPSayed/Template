@@ -4,6 +4,6 @@ namespace Template.Service.Interfaces
 {
     public interface IUserDetailsService
     {
-        int RegisterUser(UserDetailsViewModel viewModel);
+        void RegisterUser(UserDetailsViewModel viewModel);
     }
 }
